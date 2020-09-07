@@ -10,55 +10,94 @@ $sans-serif: 'Trebuchet MS', Helvetica, sans-serif
 html
   scroll-behavior: smooth
 
+  p
+    text-indent: 20px
+
+  .col
+    font-family: $serif
+
+  a
+    color: inherit
+    text-decoration: underline
+
 .page
   align-items: center
   display: flex
 
-#title
-  background-color: $light-background
-  color: $highlight
-  min-height: 100vh
-  text-align: center
-
-  h4
-    font-family: $serif
-    font-size: 40px
-    font-style: italic
-
-  h1
-    font-family: $sans-serif
-    font-size: 100px
-    margin-top: 2.5%
-
-  h2
-    font-family: $sans-serif
-    margin-top: 5%
-
-    a
-      color: inherit
-      text-decoration: none
-
-      img
-        width: 20%
-
-#content
-  background-color: $dark-background
-  color: $text
-
-  .col
+  &:nth-child(1)
+    // Title
     background-color: $light-background
-    margin: 4%
+    color: $highlight
+    min-height: 100vh
+    text-align: center
+
+    h4
+      font-size: 40px
+      font-style: italic
+
+    h1
+      font-family: $sans-serif
+      font-size: 100px
+      margin-top: 2.5%
+
+    h2
+      font-family: $sans-serif
+      margin-top: 10%
+
+    img
+      width: 15%
+
+  &:nth-child(2)
+    // Content
+    background-color: $dark-background
+    color: $text
+
+    .col
+      background-color: $light-background
+      margin: 4%
+      outline-color: $highlight
+      outline-style: solid
+      outline-width: 3px
+      padding: 4%
+
+
+      h3
+        color: $highlight
+        font-family: $sans-serif
+        margin-bottom: 25px
+        margin-left: 10px
+
+  &:nth-child(3)
+    // Photos
+    background-color: $light-background
     outline-color: $highlight
     outline-style: solid
     outline-width: 3px
-    padding: 4%
 
+    .row
+      height: 200px
+      overflow: hidden
 
-    h3
-      color: $highlight
-      font-family: $sans-serif
-      margin-bottom: 25px
-      margin-left: 10px
+    .col
+      background-position: center
+      background-size: cover
+      overflow: hidden
+      padding: 0
 
-    p
-      font-family: $serif
+      &:nth-of-type(1)
+        background-image: url('/img/flowers.jpg')
+
+      &:nth-of-type(2)
+        background-image: url('/img/bikes.jpg')
+
+      &:nth-of-type(3)
+        background-image: url('/img/picking.jpg')
+
+  &:nth-child(4)
+    // Footer
+    background-color: $dark-background
+    min-height: 50px
+
+    .col
+      text-align: center
+      color: $light-background
