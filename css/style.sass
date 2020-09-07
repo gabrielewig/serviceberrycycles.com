@@ -1,10 +1,14 @@
-@font-face
-   font-family: Syne
-   src: url('/fonts/Syne/Syne-VariableFont_wght.woff') format('woff')
+.title
+  text-align: center
+  min-height: 100%  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh /* These two lines are counted as one :-)       */
 
-.container-fluid
+  display: flex
+  align-items: center
   h4
     font-size: 40px
+    font-family: Georgia, serif
+    font-style: italic
   h1
     font-size: 100px
-    font-family: Syne
+    font-family: "Trebuchet MS", Helvetica, sans-serif
